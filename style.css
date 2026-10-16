@@ -61,3 +61,19 @@ a.pic{display:block}
 @media(max-width:880px){.featured{grid-template-columns:1fr}.featured .pic{min-height:220px;order:-1}.menu{display:block}header nav{display:none}header.open nav{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:12px 24px 20px;background:#000;border-bottom:1px solid var(--line)}header.open nav a{padding:10px 0;font-size:1rem}header.open nav .btn{justify-content:center;margin-top:8px}.hero{padding:88px 0 64px}section{padding:72px 0}.featured .txt{padding:28px}.contact{padding:40px 24px}}
 .notice{font-size:.8rem;color:var(--muted);border-left:2px solid #3a3a3a;padding:2px 0 2px 12px}
 .panel .notice{margin:0 0 8px}
+.dc{text-align:center;padding:112px 0 96px;min-height:calc(100vh - 140px);display:grid;align-content:center}
+.dc .bg{background:radial-gradient(520px 360px at 50% 30%,rgba(88,101,242,.22),transparent 70%),radial-gradient(600px 400px at 15% 90%,rgba(255,255,255,.05),transparent),radial-gradient(500px 380px at 85% 80%,rgba(255,255,255,.05),transparent)}
+.dc h1{margin:0 auto 22px}.dc .lead{margin:0 auto 40px}
+.dc-logo{width:112px;height:112px;margin:0 auto 32px;display:grid;place-items:center;border-radius:32px;background:#5865f2;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 24px 80px rgba(88,101,242,.55);animation:dc-float 5s ease-in-out infinite}
+.dc-logo svg{width:64px;height:64px;fill:#fff}
+@keyframes dc-float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+.dc-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:0 auto 44px;text-align:left}
+.dc-perk{background:rgba(17,17,17,.7);border:1px solid var(--line);border-radius:16px;padding:20px;transition:border-color .2s,transform .2s}
+.dc-perk:hover{border-color:#3a3a3a;transform:translateY(-2px)}
+.dc-perk svg{width:22px;height:22px;stroke:var(--fg);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+.dc-perk b{display:block;font-size:.98rem;margin-bottom:4px}.dc-perk span{color:var(--muted);font-size:.88rem;line-height:1.5}
+.btn.dc-btn{height:56px;padding:0 30px;font-size:1.02rem;border-radius:14px;background:#5865f2;color:#fff!important;box-shadow:0 12px 40px rgba(88,101,242,.45)}
+.btn.dc-btn svg{width:22px;height:22px;fill:#fff}
+.dc .notice{display:inline-block;margin-top:28px;border:0;padding:0}
+@media(max-width:700px){.dc{padding:72px 0 64px}.dc-perks{grid-template-columns:1fr}.dc-logo{width:92px;height:92px;border-radius:26px}.dc-logo svg{width:52px;height:52px}}
+@media(prefers-reduced-motion:reduce){.dc-logo{animation:none}}
