@@ -10,7 +10,7 @@
     if(document.querySelector(".rp-cc"))return;
     var s=document.createElement("style");s.textContent=css;document.head.appendChild(s);
     var d=document.createElement("div");d.className="rp-cc";d.setAttribute("role","dialog");d.setAttribute("aria-label","Cookie settings");
-    d.innerHTML='<h4>Privacy settings</h4><p>This website only uses technically necessary storage (for example to remember this choice). Optional services are only enabled if you accept them. You can change your choice at any time via “Cookie settings” at the bottom of the page. More in our <a href="/legal.html#website">Privacy Policy</a>.</p><div class="b"><button type="button" data-v="necessary">Only necessary</button><button type="button" class="p" data-v="all">Accept all</button></div>';
+    d.innerHTML='<h4>Privacy settings</h4><p>This website only uses technically necessary storage (for example to remember this choice). If you accept, optional services are enabled: the live download counter (Modrinth) and an embedded YouTube video. You can change your choice at any time via “Cookie settings” at the bottom of the page. More in our <a href="/legal.html#website">Privacy Policy</a>.</p><div class="b"><button type="button" data-v="necessary">Only necessary</button><button type="button" class="p" data-v="all">Accept all</button></div>';
     d.addEventListener("click",function(e){var v=e.target.getAttribute&&e.target.getAttribute("data-v");if(v){set(v);d.remove();document.dispatchEvent(new CustomEvent("rp-consent",{detail:v}))}});
     document.body.appendChild(d);
   }

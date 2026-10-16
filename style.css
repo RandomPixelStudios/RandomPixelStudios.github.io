@@ -46,6 +46,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .panel h3{margin:32px 0 8px;font-size:1.08rem;letter-spacing:-.01em}
 .panel p,.panel li{color:var(--muted)}.panel a{color:var(--accent)}.panel .meta{font-size:.88rem;margin-bottom:24px}
 .js .panel{display:none}.js .panel.on{display:block}
+.featured .links{align-items:center}
+a.pic{display:block}
+.play img{height:58px;width:auto;margin:-9px -6px}
+.soon{font-size:1.1rem;font-weight:600;color:var(--fg)!important}
+.pic.video{display:grid;place-items:center;aspect-ratio:16/9;min-height:0}
+.pic.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-placeholder{padding:32px;text-align:center;display:grid;gap:16px;justify-items:center;max-width:380px}
+.yt-placeholder p{margin:0;color:var(--muted);font-size:.92rem}
 @media(max-width:880px){.featured{grid-template-columns:1fr}.featured .pic{min-height:220px;order:-1}header nav a:not(.btn){display:none}.hero{padding:88px 0 64px}section{padding:72px 0}.featured .txt{padding:28px}.contact{padding:40px 24px}}
 .notice{font-size:.8rem;color:var(--muted);border-left:2px solid #3a3a3a;padding:2px 0 2px 12px}
 .panel .notice{margin:0 0 8px}
