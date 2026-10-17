@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#000000">
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="/assets/fonts.css">
-  <link rel="stylesheet" href="/style.css?v=10">
+  <link rel="stylesheet" href="/style.css?v=11">
   <link rel="icon" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <script src="/assets/consent.js?v=3" defer></script>
@@ -29,12 +29,19 @@
   </header>
 
   <main id="main">
-    <section class="notfound">
+    <section class="hero notfound">
+      <div class="bg"></div>
       <div class="wrap">
+        <div class="nf-code" aria-hidden="true">404</div>
         <div class="kicker">Error 404</div>
-        <h1>Page not found.</h1>
-        <p class="lead">The page you are looking for doesn't exist or has been moved.</p>
-        <a class="btn" href="/">Back to homepage</a>
+        <h1>Lost a pixel?</h1>
+        <p class="lead">The page you are looking for doesn't exist or has been moved. Maybe one of these helps:</p>
+        <div class="nf-links">
+          <a class="btn" href="/">Back to homepage</a>
+          <a class="btn ghost" href="/#projects">Projects</a>
+          <a class="btn ghost" href="/discord/">Discord</a>
+          <a class="btn ghost" href="/#contact">Contact</a>
+        </div>
       </div>
     </section>
   </main>
