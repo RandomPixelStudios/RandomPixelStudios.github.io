@@ -77,3 +77,7 @@ a.pic{display:block}
 .dc .notice{display:inline-block;margin-top:28px;border:0;padding:0}
 @media(max-width:700px){.dc{padding:72px 0 64px}.dc-perks{grid-template-columns:1fr}.dc-logo{width:92px;height:92px;border-radius:26px}.dc-logo svg{width:52px;height:52px}}
 @media(prefers-reduced-motion:reduce){.dc-logo{animation:none}}
+.skip{position:absolute;left:16px;top:-60px;z-index:20;padding:10px 16px;border-radius:10px;background:var(--fg);color:var(--bg);font-weight:600}.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.pixelated{image-rendering:pixelated}.kofi img{height:36px;width:auto;border:0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}

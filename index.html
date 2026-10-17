@@ -17,17 +17,56 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://randompixelstudios.github.io/">
   <link rel="stylesheet" href="/assets/fonts.css">
-  <link rel="stylesheet" href="/style.css?v=9">
+  <link rel="stylesheet" href="/style.css?v=10">
   <link rel="icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <script src="/assets/consent.js?v=3" defer></script>
   <script src="/assets/menu.js?v=1" defer></script>
   <script src="/assets/downloads.js?v=1" defer></script>
   <script src="/assets/youtube.js?v=1" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "RandomPixxel Studios",
+        "url": "https://randompixelstudios.github.io/",
+        "logo": "https://randompixelstudios.github.io/assets/favicon.png",
+        "email": "randompixxelstudios@gmail.com",
+        "founder": {"@type": "Person", "name": "John Weide"},
+        "sameAs": ["https://github.com/RandomPixelStudios", "https://modrinth.com/mod/x-to-xray", "https://ko-fi.com/randompixxelstudios"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Cam Distance Meter",
+        "operatingSystem": "Android",
+        "applicationCategory": "UtilitiesApplication",
+        "url": "https://randompixelstudios.github.io/CamDistanceMeter/",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.camdistancemeter",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+        "publisher": {"@type": "Organization", "name": "RandomPixxel Studios"}
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "X To Xray",
+        "applicationCategory": "GameApplication",
+        "applicationSubCategory": "Minecraft mod (Fabric)",
+        "url": "https://randompixelstudios.github.io/X-To-Xray/",
+        "downloadUrl": "https://modrinth.com/mod/x-to-xray",
+        "license": "https://www.apache.org/licenses/LICENSE-2.0",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+        "publisher": {"@type": "Organization", "name": "RandomPixxel Studios"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header>
     <div class="wrap">
-      <a class="logo" href="/"><img src="/assets/logo.png" alt="RP">RandomPixxel Studios</a>
+      <a class="logo" href="/"><img src="/assets/logo.png" alt="" width="41" height="22">RandomPixxel Studios</a>
       <button class="menu" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <nav>
         <a href="/#projects">Projects</a>
@@ -37,7 +76,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <div class="hero">
       <div class="bg"></div>
       <div class="wrap">
@@ -56,24 +95,24 @@
         <div class="featured">
           <div class="txt">
             <div class="top">
-              <img src="/assets/cdm-icon.png" alt="">
+              <img src="/assets/cdm-icon.png" alt="" width="56" height="56">
               <div class="tags"><span class="tag">Android app</span><span class="tag">Free</span><span class="tag">On-device</span></div>
             </div>
             <h3>Cam Distance Meter</h3>
             <p>Turn your phone's camera into a rangefinder. Aim, tap and get an instant distance estimate using dual-camera stereo depth or autofocus — computed entirely on your device.</p>
             <div class="links">
-              <a class="play" href="https://play.google.com/store/apps/details?id=com.camdistancemeter"><img src="/assets/google-play.png" alt="Get it on Google Play"></a>
+              <a class="play" href="https://play.google.com/store/apps/details?id=com.camdistancemeter"><img src="/assets/google-play.png" alt="Get it on Google Play" width="150" height="58"></a>
               <a class="btn sm ghost" href="/CamDistanceMeter/">View project</a>
             </div>
           </div>
-          <a class="pic" href="/CamDistanceMeter/"><img src="/assets/cdm-banner.webp" alt="Cam Distance Meter measuring a table in a living room" loading="lazy"></a>
+          <a class="pic" href="/CamDistanceMeter/"><img src="/assets/cdm-banner.webp" alt="Cam Distance Meter measuring a table in a living room" width="1475" height="720" loading="lazy"></a>
         </div>
 
         <!-- X To Xray -->
         <div class="featured">
           <div class="txt">
             <div class="top">
-              <img src="/assets/xr-icon.png" alt="" style="image-rendering:pixelated">
+              <img class="pixelated" src="/assets/xr-icon-128.png" alt="" width="56" height="56">
               <div class="tags"><span class="tag">Minecraft mod</span><span class="tag">Fabric</span><span class="tag">Open source</span></div>
             </div>
             <h3>X To Xray</h3>
@@ -86,7 +125,7 @@
               <a class="btn sm ghost" href="https://github.com/RandomPixelStudios/X-To-Xray">Source on GitHub</a>
             </div>
           </div>
-          <a class="pic" href="/X-To-Xray/"><img src="/assets/xr-banner.webp" alt="Minecraft landscape without and with X To Xray: only ores remain visible" loading="lazy"></a>
+          <a class="pic" href="/X-To-Xray/"><img src="/assets/xr-banner.webp" alt="Minecraft landscape without and with X To Xray: only ores remain visible" width="1600" height="638" loading="lazy"></a>
         </div>
 
         <!-- Simple Dart -->
@@ -115,7 +154,8 @@
           <h2>Have a question or idea?</h2>
           <p class="sub">Support requests, feedback or business inquiries — I'd love to hear from you.</p>
           <a class="btn" href="mailto:randompixxelstudios@gmail.com">randompixxelstudios@gmail.com</a>
-          <p class="kofi"><a href="https://ko-fi.com/randompixxelstudios" target="_blank" rel="noopener"><img height="36" style="border:0;height:36px" src="/assets/kofi.png" alt="Buy Me a Coffee at ko-fi.com"></a></p>
+          <a class="btn ghost" href="/discord/">Join our Discord</a>
+          <p class="kofi"><a href="https://ko-fi.com/randompixxelstudios" target="_blank" rel="noopener"><img src="/assets/kofi.png" alt="Buy Me a Coffee at ko-fi.com" width="143" height="36"></a></p>
         </div>
       </div>
     </section>
@@ -128,6 +168,7 @@
         <a href="/legal.html#website">Legal Notice</a>
         <a href="/legal.html#website-privacy">Privacy</a>
         <a href="#" data-cookie-settings>Cookie settings</a>
+        <a href="/discord/">Discord</a>
         <a href="mailto:randompixxelstudios@gmail.com">Contact</a>
       </nav>
     </div>
