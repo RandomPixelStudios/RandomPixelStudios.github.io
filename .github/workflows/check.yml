@@ -1,0 +1,18 @@
+name: Check site
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress --root-dir "${{ github.workspace }}" --exclude-path CLAUDE.md --exclude "CamDistanceMeter|X-To-Xray" "./**/*.html"
+          fail: true
+      - name: Validate HTML
+        run: npx --yes html-validate@9 --config .htmlvalidate.json "*.html" "discord/*.html"

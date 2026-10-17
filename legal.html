@@ -17,10 +17,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://randompixelstudios.github.io/legal.html">
     <link rel="stylesheet" href="/assets/fonts.css" />
-    <link rel="stylesheet" href="/style.css?v=11" />
+    <link rel="stylesheet" href="/style.css?v=12" />
     <link rel="icon" href="/assets/favicon.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-    <script src="/assets/consent.js?v=3" defer></script>
+    <script src="/assets/consent.js?v=4" defer></script>
     <script src="/assets/menu.js?v=1" defer></script>
   </head>
   <body>
@@ -32,9 +32,9 @@
           RandomPixxel Studios
         </a>
         <button class="menu" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-        <nav>
+        <nav aria-label="Main">
           <a href="/#projects">Projects</a>
-          <a href="/legal.html">Legal</a>
+          <a href="/legal.html" aria-current="page">Legal</a>
           <a class="btn sm" href="/#contact">Contact</a>
         </nav>
       </div>
@@ -116,9 +116,7 @@
           This website does not use tracking or advertising cookies and no analytics tools. Your choice in the privacy
           banner is stored in your browser's local storage (key “rp-consent”) so that the banner is not shown again.
           This storage is technically necessary (§ 25(2) no. 2 TDDDG, Art. 6(1)(f) GDPR). Optional services are only
-          enabled after you click “Accept all” (see sections 7 and 8). If you accept, the current download count of X To
-          Xray is additionally cached in local storage (key “rp-xr-downloads”) for up to 20 minutes; it is deleted when
-          you switch to “Only necessary”. You can change your choice at any time via “Cookie settings” at the bottom of
+          enabled after you click “Accept all” (see section 8). You can change your choice at any time via “Cookie settings” at the bottom of
           each page, or delete the stored value in your browser settings.
         </p>
         <h3>5. Contact by email</h3>
@@ -140,15 +138,11 @@
           information:
           <a href="https://discord.com/privacy">Discord Privacy Policy</a>.
         </p>
-        <h3>7. Download counter (Modrinth API)</h3>
+        <h3>7. Download counter</h3>
         <p>
-          Only if you click “Accept all”, the homepage retrieves the current download count of X To Xray from the public
-          API of Modrinth (Rinth, Inc., USA; api.modrinth.com) when the page is loaded and every 20 minutes while it is
-          open. Your browser connects directly to Modrinth, which processes your IP address, the time of the request and
-          browser information. Legal basis is your consent (Art. 6(1)(a) GDPR, § 25(1) TDDDG), which you can withdraw at
-          any time via “Cookie settings”. Without consent, no connection is made and a fixed value is shown. Data may be
-          transferred to the USA. More information:
-          <a href="https://modrinth.com/legal/privacy">Modrinth Privacy Policy</a>.
+          The homepage shows the download count of X To Xray on Modrinth. This number is retrieved once a day by an
+          automated job on GitHub (see section 2) and stored as a file on this website. Your browser only loads this file
+          from our own website; no connection to Modrinth is made and no personal data is transferred to Modrinth.
         </p>
         <h3>8. YouTube videos</h3>
         <p>
@@ -507,6 +501,7 @@
         </p>
       </div>
     </main>
+    <button class="totop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
     <script>
       document.documentElement.classList.add("js");
       (function () {
@@ -536,12 +531,21 @@
           sel(location.hash);
         });
         sel(location.hash);
+        var top = document.querySelector(".totop");
+        function upd() {
+          top.classList.toggle("show", window.scrollY > 600);
+        }
+        window.addEventListener("scroll", upd, { passive: true });
+        upd();
+        top.addEventListener("click", function () {
+          window.scrollTo({ top: 0 });
+        });
       })();
     </script>
     <footer>
       <div class="wrap">
         <span>© 2026 RandomPixxel Studios – John Weide</span>
-        <nav>
+        <nav aria-label="Footer">
           <a href="/legal.html#website">Legal Notice</a>
           <a href="/legal.html#website-privacy">Privacy</a>
           <a href="#" data-cookie-settings>Cookie settings</a>
